@@ -25,6 +25,7 @@ function createBoxes(amount){
         div.style.backgroundColor = Math.random;
         div.style.width = refs.min_size + "px";
         div.style.height = refs.min_size + "px";
+        div.style.BorderRadius = '8px';
         refs.important_div.appendChild(div);
         refs.min_size += 10;
      
@@ -35,4 +36,5 @@ function getRandomInt(min, max) {
 }
 refs.clear.addEventListener("click", (event) => {
     while(refs.important_div.firstChild) refs.important_div.removeChild(refs.important_div.firstChild);
+    refs.min_size = 30;
 });
